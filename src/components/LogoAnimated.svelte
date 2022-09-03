@@ -5,7 +5,6 @@
     const duration = 1500;
     function fillOpacity(node, params) {
         const { delay = 0, duration, easing } = params;
-
         return {
             delay,
             duration,

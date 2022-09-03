@@ -5,7 +5,7 @@
 <header>
     <div class="container">
         <nav>
-            <HeaderLink svg={dg} href="https://goepel.it" label="home" />
+            <HeaderLink svg={dg} href="/" label="home" />
         </nav>
         <div class="right">
             Enhance your DX - Svelte Summit 2022
@@ -13,9 +13,6 @@
     </div>
 </header>
 <style>
-    header {
-        border-bottom: 1px solid currentColor;
-    }
     .container {
         display: flex;
         font-size: 1.2rem;

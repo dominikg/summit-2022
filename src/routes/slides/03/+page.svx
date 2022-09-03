@@ -1,0 +1,9 @@
+---
+foo: bar
+---
+# slide 3
+
+cool stuff
+
+## foo
+{foo}

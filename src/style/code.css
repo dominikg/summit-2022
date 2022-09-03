@@ -1,0 +1,42 @@
+.code-highlight {
+    position: relative;
+    font-family: 'Fira Mono', monospace;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 80vh;
+    margin: 1rem auto;
+    box-shadow: var(--shadow);
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    max-width: 90%;
+}
+
+
+.code-highlight > .code-language {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    background: rgba(127,127,127,0.3);
+    padding: 0 0.25rem;
+}
+
+.code-highlight > code {
+    display: inline-block;
+    padding: 1rem;
+}
+
+.code-highlight > code.numbered {
+    margin-left: 2rem;
+    padding-left: 0.5rem;
+    border-left: 1px solid rgba(127, 127, 127, 0.5);
+    counter-reset: line;
+}
+
+.code-highlight > code > .line-of-code {
+    white-space: pre-wrap;
+    display: inline-block;
+    min-height: 1em;
+}

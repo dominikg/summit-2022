@@ -6,7 +6,19 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body class="dark">
+	<body>
+	<script type="application/javascript">
+		(function () {
+			if (document && window && window.localStorage) {
+				const t = window.localStorage.getItem('theme');
+				if (t) {
+					document.body.classList.add(`${t}`);
+				}
+			}
+		})();
+	</script>
+	<div style="display: contents">
 		%sveltekit.body%
+	</div>
 	</body>
 </html>

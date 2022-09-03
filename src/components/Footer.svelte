@@ -1,16 +1,44 @@
+<script>
+    import {onMount} from "svelte";
+    import ThemeSwitch from "./ThemeSwitch.svelte";
+    import {page} from '$app/stores'
+    import {goto} from '$app/navigation'
+    const slides = 'slides/'
+    function slideLink(n,d) {
+        return `/${slides}${String(slideNo+d).padStart(2,'0')}`
+    }
+    $: isSlide = $page.routeId?.startsWith(slides);
+    $: slideNo = isSlide ? parseInt($page.routeId.replace('slides/','')) : 0;
+    $: next = slideLink(slideNo,1)
+    $: prev = slideNo > 1 ? slideLink(slideNo,-1) : '/'
+    let listening = false;
+    const keyNavListener = e => {
+        if(e.key === ' ' || e.key === 'ArrowRight') {
+            goto(next)
+        } else if(e.key === 'ArrowLeft') {
+            goto(prev)
+        }
+    }
+    onMount(()=>{
+        document.body.addEventListener('keyup',keyNavListener)
+        return ()=> document.body.removeEventListener("keyup",keyNavListener)
+    })
+</script>
 <footer>
     <div class="container">
         <span>dominikg &copy; 2022</span>
         <nav>
-            <a href="">prev</a>
-            <a href="">next</a>
+            {#if !isSlide}
+                <a href='/slides/01'>start</a>
+            {:else}
+                <a href={prev}>prev</a>
+                <a href={next}>next</a>
+            {/if}
+            <ThemeSwitch/>
         </nav>
     </div>
 </footer>
 <style>
-    footer {
-        border-top: 1px solid currentColor;
-    }
     .container {
         display: flex;
         flex-direction: column;

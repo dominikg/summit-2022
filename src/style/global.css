@@ -5,6 +5,7 @@
     --fg: var(--light);
     --bg: var(--dark);
     --color-scrollbar: rgba(0, 0, 0, 0.3);
+    --shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .2), 0 .25rem 1rem 0 rgba(0, 0, 0, .2), 0 .5rem .25rem -.25rem rgba(0, 0, 0, .2);
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -59,9 +60,9 @@ p,
 
 .container {
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 2rem 0;
     width: calc(100vw - 2rem);
-    max-width: 1280px;
+    max-width: 1920px;
 }
 
 a {
@@ -92,13 +93,7 @@ html {
     height: 100%;
 }
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    gap: 0;
-    height: 100%;
-    overflow-x: hidden; /* prevent scrollbar flickering */
-    margin-right: calc(-1 * (100vw - 100%));
-}
-main {
     height: 100%;
 }
+
+
