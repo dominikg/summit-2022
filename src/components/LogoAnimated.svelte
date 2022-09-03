@@ -1,0 +1,86 @@
+<script>
+    import { onMount, tick } from 'svelte';
+    import { draw } from 'svelte/transition';
+    import { quintOut as easing } from 'svelte/easing';
+    const duration = 1500;
+    function fillOpacity(node, params) {
+        const { delay = 0, duration, easing } = params;
+
+        return {
+            delay,
+            duration,
+            easing,
+            css: (t) => `fill-opacity: ${t};`
+        };
+    }
+
+    let hasJS = false;
+    let ready = false;
+    onMount(async () => {
+        hasJS = true;
+        await tick();
+        setTimeout(() => {
+            ready = true;
+        }, duration);
+    });
+</script>
+
+{#if hasJS}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 375">
+        {#if ready}
+            <g in:fillOpacity={{ duration, delay: duration * 2, easing }} out:fillOpacity>
+                <path
+                        in:draw={{ duration, delay: duration, easing }}
+                        out:draw={{ duration, delay: duration, easing }}
+                        stroke="currentColor"
+                        stroke-width="1"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M280.551 349c0 13.255-10.745 24-24 24H131.594c-22.633 0-54.31-7.749-81.005-26.745C22.723 326.424 0 293.908 0 247c0-46.908 22.723-79.424 50.59-99.255C77.283 128.749 108.96 121 131.594 121H256.55c13.255 0 24 10.745 24 24v32H131.595c-11.963 0-32.083 4.662-48.537 16.371C67.777 204.246 56 220.73 56 247c0 26.27 11.777 42.754 27.058 53.629C99.512 312.338 119.632 317 131.595 317h92.956v-45.873h56V349Z"
+                        clip-rule="evenodd"
+                />
+                <path
+                        in:draw={{ duration, easing }}
+                        out:draw={{ duration, delay: duration, easing }}
+                        stroke="currentColor"
+                        stroke-width="1"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M168.551 26c0-13.255 10.745-24 24-24h124.957c22.633 0 54.311 7.749 81.005 26.745 27.867 19.83 50.589 52.347 50.589 99.255 0 46.908-22.722 79.424-50.589 99.255C371.819 244.251 340.141 252 317.508 252H192.551c-13.255 0-24-10.745-24-24v-32h148.957c11.962 0 32.082-4.662 48.536-16.371 15.282-10.875 27.058-27.359 27.058-53.629 0-26.27-11.776-42.754-27.058-53.629C349.59 60.662 329.47 56 317.508 56h-92.957v45.873h-56V24Z"
+                        clip-rule="evenodd"
+                />
+            </g>
+        {/if}
+    </svg>
+{:else}
+    <noscript>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 375">
+            <path
+                    stroke="currentColor"
+                    stroke-width="1"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M280.551 349c0 13.255-10.745 24-24 24H131.594c-22.633 0-54.31-7.749-81.005-26.745C22.723 326.424 0 293.908 0 247c0-46.908 22.723-79.424 50.59-99.255C77.283 128.749 108.96 121 131.594 121H256.55c13.255 0 24 10.745 24 24v32H131.595c-11.963 0-32.083 4.662-48.537 16.371C67.777 204.246 56 220.73 56 247c0 26.27 11.777 42.754 27.058 53.629C99.512 312.338 119.632 317 131.595 317h92.956v-45.873h56V349Z"
+                    clip-rule="evenodd"
+            />
+            <path
+                    stroke="currentColor"
+                    stroke-width="1"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M168.551 26c0-13.255 10.745-24 24-24h124.957c22.633 0 54.311 7.749 81.005 26.745 27.867 19.83 50.589 52.347 50.589 99.255 0 46.908-22.722 79.424-50.589 99.255C371.819 244.251 340.141 252 317.508 252H192.551c-13.255 0-24-10.745-24-24v-32h148.957c11.962 0 32.082-4.662 48.536-16.371 15.282-10.875 27.058-27.359 27.058-53.629 0-26.27-11.776-42.754-27.058-53.629C349.59 60.662 329.47 56 317.508 56h-92.957v45.873h-56V24Z"
+                    clip-rule="evenodd"
+            />
+        </svg>
+    </noscript>
+{/if}
+
+<style>
+    svg,
+    noscript {
+        width: 30%;
+    }
+    noscript > svg {
+        width: 100%;
+    }
+</style>
