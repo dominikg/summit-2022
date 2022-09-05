@@ -1,6 +1,6 @@
 # Credits and Attribution
 
-My eternal gratitude goes out to everyone who has a part in making these.
+My eternal gratitude to everyone who has a part in making these.<br>
 Without you this talk would not have been possible!
 
 ### Tools
@@ -14,9 +14,5 @@ Without you this talk would not have been possible!
 ### Art
 
 - evolution.svg <a href="https://commons.wikimedia.org/wiki/File:Human_evolution.svg">Tkgd2007</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons
-
-### Repo
-
-* [https://github.com/dominikg/summit-2022](https://github.com/dominikg/summit-2022)
 
 

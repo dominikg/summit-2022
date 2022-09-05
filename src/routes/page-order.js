@@ -9,5 +9,6 @@ export const pageOrder = [
     '/slides/dev-setup-context',
 
     '/slides/prose/thank-you',
-    '/slides/prose/credits'
+    '/slides/prose/credits',
+    '/slides/prose/fin'
 ]
