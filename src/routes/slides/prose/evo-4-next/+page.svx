@@ -1,0 +1,18 @@
+<script>
+    import Evolution from "$components/Evolution.svelte";
+</script>
+
+## But are we there yet?
+
+<Evolution highlight={4}/>
+
+<h2 style="text-align: right">Not quite!</h2>
+
+### file explorer - editor
+### terminal - browser
+### devtools
+
+# What's wrong?
+<style>
+  h3 {text-align: center;}
+</style>

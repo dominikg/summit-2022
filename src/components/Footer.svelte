@@ -9,7 +9,6 @@
     $: next = (currentIndex < (list.length -1)) ? list[currentIndex +1] : null
     $: prev = (currentIndex > 0) ? list[currentIndex -1] : null
 
-    $: console.log($page.routeId,currentIndex,next,prev)
     const keyNavListener = e => {
         if((e.key === ' ' || e.key === 'ArrowRight') && next != null) {
             goto(next)
@@ -42,7 +41,8 @@
         flex-direction: column;
         align-items: center;
         gap: 0 0.5rem;
-        padding: 2rem 0.25rem;
+        padding: 1rem 0.25rem;
+        font-size: 1.5rem;
     }
     @media (min-width: 1024px) {
         .container {

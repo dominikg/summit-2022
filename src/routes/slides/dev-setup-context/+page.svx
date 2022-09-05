@@ -1,0 +1,24 @@
+<script>
+  import dom from './dom.png'
+  import fs from './filesystem.png'
+</script>
+# And even worse
+
+<div class="side-by-side shadow">
+  <img src={fs} alt="fs"/>
+  <img src={dom} alt="dom"/>
+</div>
+
+## we need context to navigate
+
+<style>
+  .side-by-side {
+    display: flex;
+    height: 720px;
+  }
+  .side-by-side img {
+    aspect-ratio: 8/9;
+  }
+  h2 {text-align: right;}
+  h3 {text-align: center;}
+</style>

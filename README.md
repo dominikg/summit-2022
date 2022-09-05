@@ -1,38 +1,18 @@
-# create-svelte
+# Enhance your DX - A talk @ Svelte Summit 2022
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## setup
 
-## Creating a project
+To run this, clone vite-plugin-svelte locally, checkout branch [experiment/inline-editor](https://github.com/sveltejs/vite-plugin-svelte/tree/experiment/inline-editor)
+run `pnpm build` in your local vite-plugin svelte and finally update the pnpm override in here to point at it 
 
-If you're seeing this, you've probably already done this step. Congrats!
+## run it
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+`pnpm i && pnpm dev`
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+* use space,Left/Right arrow or footer buttons to navigate
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Disclaimer
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+The setup in use here is not a great example. It was cobbled together to allow for some live effects during the presentation.
+Feel free to send improvements or use it elsewhere, but please don't judge

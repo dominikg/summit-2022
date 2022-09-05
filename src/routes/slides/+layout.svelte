@@ -1,9 +1,9 @@
-<div class="prose">
+<div class="slide">
     <slot></slot>
 </div>
 <style>
-    .prose {
-        max-width: 65ch;
+    .slide {
+        max-width: 1280px;
         margin: 0 auto;
     }
 </style>

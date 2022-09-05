@@ -1,8 +1,6 @@
 <script>
-    import Evolution from "../../../components/Evolution.svelte";
+    import Evolution from "$components/Evolution.svelte";
 </script>
-
-# Evolution of `dev`
 
 ## With dev-servers and live-reload
 

@@ -1,0 +1,12 @@
+<script>
+    import src from './dev-today.png'
+</script>
+
+# In a typical dev setup
+
+<img style="width: 100%;" {src} class="shadow">
+
+## we constantly switch focus
+<style>
+  h2 {text-align: right;}
+</style>

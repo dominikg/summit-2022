@@ -40,6 +40,7 @@ body {
     color: var(--fg);
     background-color: var(--bg);
     font-family: 'Fira Mono', monospace;
+    font-size: 2rem;
 }
 
 h1,
@@ -55,12 +56,11 @@ p,
 .prose {
     font-family: 'Cooper Hewitt', sans-serif;
     letter-spacing: 0.25px;
-    font-size: 1.25rem;
 }
 
 .container {
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 0;
     width: calc(100vw - 2rem);
     max-width: 1920px;
 }
@@ -96,4 +96,6 @@ body {
     height: 100%;
 }
 
-
+.shadow {
+    box-shadow: var(--shadow);
+}
