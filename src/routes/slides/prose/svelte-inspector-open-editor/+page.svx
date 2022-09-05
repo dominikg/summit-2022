@@ -1,0 +1,21 @@
+<script>
+  import error from './error_overlay.png'
+</script>
+## Open the editor
+
+### isn't complicated either
+```js
+function click(event) {
+    if (file_loc) {
+        // ... snipped stop event code
+        fetch(`/__open-in-editor?file=${encodeURIComponent(file_loc)}`);
+        if (options.holdMode && is_holding()) {
+            disable();
+        }
+    }
+}
+```
+<h3 style="text-align: center">because __open-in-editor?file=...</h3>
+<img src={error}  style="display:block" class="code-highlight" alt="error-overlay"/>
+
+<h3 style="text-align: right">exists for the vite error overlay</h3>

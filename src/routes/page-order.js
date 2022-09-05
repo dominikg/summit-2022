@@ -7,7 +7,14 @@ export const pageOrder = [
     '/slides/prose/evo-4-next',
     '/slides/dev-setup-today',
     '/slides/dev-setup-context',
-
+    '/slides/prose/svelte-inspector-enter',
+    '/slides/prose/svelte-inspector-how-it-works',
+    '/slides/prose/svelte-inspector-inject',
+    '/slides/prose/svelte-inspector-load-ui',
+    '/slides/prose/svelte-inspector-load-ui-2',
+    '/slides/prose/svelte-inspector-map-dom',
+    '/slides/prose/svelte-inspector-open-editor',
+    '/slides/prose/svelte-inspector-next',
     '/slides/prose/thank-you',
     '/slides/prose/credits',
     '/slides/prose/fin'

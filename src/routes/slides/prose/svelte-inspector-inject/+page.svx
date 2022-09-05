@@ -1,0 +1,29 @@
+## Inject code
+
+### to avoid a direct dependency
+```js
+
+transform(code: string, id: string, options?: { ssr?: boolean }) {
+    // append virtual module to root module for svelte-kit
+    // import 'virtual:svelte-inspector-path:load-inspector.js'
+},
+
+transformIndexHtml(html) {
+    // inject to body script for vite+svelte
+    // '/@id/virtual:svelte-inspector-path:load-inspector.js'
+}
+
+async resolveId(importee: string, importer, options) {
+    const p = normalizePath(path.dirname(fileURLToPath(import.meta.url)));
+    // resolve virtual modules using p as base
+},
+
+async load(id, options) {
+    // load resolved file with fs.read
+    const file = idToFile(id);
+    if (fs.existsSync(file)) {
+        return await fs.promises.readFile(file, 'utf-8');
+    }
+},
+```
+<h3 style="text-align: right">we load virtual modules relative to import.meta.url</h3>

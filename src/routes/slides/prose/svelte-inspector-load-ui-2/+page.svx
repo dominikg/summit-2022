@@ -1,0 +1,30 @@
+## Inspector.svelte
+
+### is less than 250 lines
+```svelte
+<script>
+	import { onMount } from 'svelte';
+	import options from 'virtual:svelte-inspector-options';
+	const toggle_combo = options.toggleKeyCombo?.toLowerCase().split('-');
+	let enabled = false;
+	const icon = `...`;
+    // location of code in file
+    let file_loc;
+    //... all the logic
+</script>
+{#if show_toggle}
+	<!-- toggle button -->
+{/if}
+{#if enabled && file_loc}
+    <!-- bubble -->
+{/if}
+<style>
+  /* outline, toggle, bubble, cursor */
+</style>
+```
+<h3 style="text-align: right">and includes all logic and ui</h3>
+
+
+<style>
+  .code-highlight {max-height: 50vh}
+</style>

@@ -1,0 +1,17 @@
+<script>
+    import Evolution from "$components/Evolution.svelte";
+</script>
+
+## But are we there yet?
+
+<Evolution highlight={4}/>
+
+<h2 style="text-align: right">still some ways to go!</h2>
+
+### ~~provide context~~
+### keep focus
+
+# What?
+<style>
+  h3 {text-align: center;}
+</style>

@@ -3,7 +3,11 @@
 My eternal gratitude to everyone who has a part in making these.<br>
 Without you this talk would not have been possible!
 
-### Tools
+### Inspiration
+
+- [vite-plugin-vue-inspector](https://github.com/webfansplz/vite-plugin-vue-inspector)
+
+### Tools to build this talk
 
 - [SvelteKit](https://kit.svelte.dev)
 - [Vite](https://vitejs.dev)

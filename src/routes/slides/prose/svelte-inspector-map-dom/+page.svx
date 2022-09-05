@@ -1,0 +1,26 @@
+## Mapping dom nodes to .svelte sources
+
+### is very easy
+```js
+function findMetaEl(el) {
+    while (el) {
+        const file = el.__svelte_meta?.loc?.file;
+        if (el !== toggle_el && file && !file.includes('node_modules/')) {
+            return el;
+        }
+        el = el.parentNode;
+    }
+}
+```
+
+<h3 style="text-align: center">because __svelte_meta</h3>
+
+```json
+"loc": {
+    "file": "src/routes/slides/prose/svelte-inspector-map-dom/+page.svx",
+    "line": 13,
+    "column": 0,
+    "char": 1384
+}
+```
+<h3 style="text-align: right">is added to dom nodes during dev since 2018</h3>

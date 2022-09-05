@@ -9,7 +9,7 @@
   <img src={dom} alt="dom"/>
 </div>
 
-## we need context to navigate
+## we need context to navigate.
 
 <style>
   .side-by-side {
