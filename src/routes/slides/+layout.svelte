@@ -3,7 +3,7 @@
 </div>
 <style>
     .prose {
-        max-width: 1280px;
+        max-width: 65ch;
         margin: 0 auto;
     }
 </style>

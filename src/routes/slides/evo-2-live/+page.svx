@@ -1,0 +1,21 @@
+<script>
+    import Evolution from "../../../components/Evolution.svelte";
+</script>
+
+# Evolution of `dev`
+
+## With dev-servers and live-reload
+
+<Evolution highlight={2}/>
+
+<h2 style="text-align: right">things improved a bit</h2>
+
+### full rebuild
+### ~~server restart~~
+### ~~browser reload~~
+
+##  but it still took seconds at best.
+
+<style>
+  h3 {text-align: center;}
+</style>

@@ -3,19 +3,17 @@
     import ThemeSwitch from "./ThemeSwitch.svelte";
     import {page} from '$app/stores'
     import {goto} from '$app/navigation'
-    const slides = 'slides/'
-    function slideLink(n,d) {
-        return `/${slides}${String(slideNo+d).padStart(2,'0')}`
-    }
-    $: isSlide = $page.routeId?.startsWith(slides);
-    $: slideNo = isSlide ? parseInt($page.routeId.replace('slides/','')) : 0;
-    $: next = slideLink(slideNo,1)
-    $: prev = slideNo > 1 ? slideLink(slideNo,-1) : '/'
-    let listening = false;
+    import {pageOrder as list} from "../routes/page-order.js";
+
+    $: currentIndex = list.indexOf('/'+$page.routeId);
+    $: next = (currentIndex < (list.length -1)) ? list[currentIndex +1] : null
+    $: prev = (currentIndex > 0) ? list[currentIndex -1] : null
+
+    $: console.log($page.routeId,currentIndex,next,prev)
     const keyNavListener = e => {
-        if(e.key === ' ' || e.key === 'ArrowRight') {
+        if((e.key === ' ' || e.key === 'ArrowRight') && next != null) {
             goto(next)
-        } else if(e.key === 'ArrowLeft') {
+        } else if(e.key === 'ArrowLeft' && prev != null) {
             goto(prev)
         }
     }
@@ -28,11 +26,11 @@
     <div class="container">
         <span>dominikg &copy; 2022</span>
         <nav>
-            {#if !isSlide}
-                <a href='/slides/01'>start</a>
-            {:else}
+            {#if prev}
                 <a href={prev}>prev</a>
-                <a href={next}>next</a>
+            {/if}
+            {#if next}
+                <a href={next}>{currentIndex === 0 ? 'start':'next'}</a>
             {/if}
             <ThemeSwitch/>
         </nav>

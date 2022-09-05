@@ -1,0 +1,21 @@
+<script>
+    import Evolution from "../../../components/Evolution.svelte";
+</script>
+
+# Evolution of `dev`
+
+## Way back
+
+<Evolution highlight={1}/>
+
+<h2 style="text-align: right">before dev-servers became a thing</h2>
+
+### full rebuild
+### server restart
+### browser reload
+
+## the feedback loop measured in minutes.
+
+<style>
+  h3 {text-align: center;}
+</style>
