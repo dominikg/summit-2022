@@ -9,11 +9,28 @@
     $: next = (currentIndex < (list.length -1)) ? list[currentIndex +1] : null
     $: prev = (currentIndex > 0) ? list[currentIndex -1] : null
 
+    function isInEditor(e) {
+        let el = e.target;
+        while(el) {
+            if(el.classList?.contains('svelte-inline-editor')) {
+                return true;
+            }
+            if(el === el.parentNode) {
+                break;
+            }
+            el = el.parentNode;
+        }
+        false;
+    }
     const keyNavListener = e => {
         if((e.key === ' ' || e.key === 'ArrowRight') && next != null) {
-            goto(next)
+            if(!isInEditor(e)) {
+                goto(next)
+            }
         } else if(e.key === 'ArrowLeft' && prev != null) {
-            goto(prev)
+            if(!isInEditor(e)) {
+                goto(prev)
+            }
         }
     }
     onMount(()=>{

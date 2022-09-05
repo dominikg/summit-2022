@@ -4,7 +4,7 @@
 
 # In a typical dev setup
 
-<img style="width: 100%;" {src} class="shadow">
+<img style="width: 100%;" {src} class="shadow" alt="setup">
 
 ## we constantly switch focus
 <style>
