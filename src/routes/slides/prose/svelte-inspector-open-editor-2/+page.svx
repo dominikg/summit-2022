@@ -1,0 +1,15 @@
+<script>
+  import launch from './launch_editor.png'
+</script>
+## Under the hood of __open-in-editor
+
+### is [launch-editor](https://github.com/yyx990803/launch-editor)
+```js
+// vite server
+  // open in editor support
+  middlewares.use('/__open-in-editor', launchEditorMiddleware())
+```
+<h3 style="text-align: center">which has been updated in vite 3.1</h3>
+<img src={launch}  style="display:block" class="code-highlight" alt="launch-pr"/>
+
+<h3 style="text-align: right">to give you full control</h3>

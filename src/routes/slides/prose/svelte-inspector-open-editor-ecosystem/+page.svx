@@ -1,0 +1,23 @@
+<script>
+  import sb from './inspector_stackblitz.png'
+</script>
+## Ecosystem compatibility
+
+### it just works&trade; on [stackblitz](https://stackblitz.com/edit/sveltejs-kit-template-default-hb7yyu?file=svelte.config.js&terminal=dev)
+
+<img src={sb}  style="display:block" class="code-highlight" alt="stackblitz"/>
+
+### and kind of works in [astro](https://astro.build)<sup>*</sup>
+
+```js
+// astro.config.mjs integrations
+svelte({
+    experimental: {
+        inspector: {
+             appendTo: 'ClientSideComponent.svelte'
+        }
+    }
+})
+```
+
+<h3 style="text-align: right"><sup>*</sup>for client: components only</h3>

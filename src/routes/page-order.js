@@ -14,6 +14,8 @@ export const pageOrder = [
     '/slides/prose/svelte-inspector-load-ui-2',
     '/slides/prose/svelte-inspector-map-dom',
     '/slides/prose/svelte-inspector-open-editor',
+    '/slides/prose/svelte-inspector-open-editor-2',
+    '/slides/prose/svelte-inspector-open-editor-ecosystem',
     '/slides/prose/svelte-inspector-next',
     '/slides/prose/thank-you',
     '/slides/prose/credits',
