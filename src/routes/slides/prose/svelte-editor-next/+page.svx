@@ -6,11 +6,15 @@
 
 <Evolution highlight={6}/>
 
-<h2 style="text-align: right">almost!</h2>
+<h2 style="text-align: right">almost<sup>*</sup></h2>
 
 ### ~~provide context~~
 ### ~~keep focus~~
 ### improve focus ui
+
+<br>
+
+#### <sup>*</sup>inline-editor is just a proof of concept today
 
 <style>
   h3 {text-align: center;}

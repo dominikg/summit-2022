@@ -89,4 +89,12 @@
     .center.highlight-6 :global(svg path:nth-child(-n+3)) {
         opacity: 0.3;
     }
+    .center.highlight-7 :global(svg path:nth-child(4)) {
+        opacity: 1;
+        fill-opacity: 1;
+        fill: #ff3e00;
+    }
+    .center.highlight-7 :global(svg path:nth-child(-n+3)) {
+        opacity: 0.3;
+    }
 </style>
