@@ -19,5 +19,5 @@ compileSvelte(requestParser(file, false)!, code, options)
         server.ws.send('svelte-inline-editor:error', { file, error, code, content });
     });
 ```
-<h3 style="text-align: right">and write the changes to disk</h3>
+<h3 style="text-align: right">and writes the changes to disk</h3>
 

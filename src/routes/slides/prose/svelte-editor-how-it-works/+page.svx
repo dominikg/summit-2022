@@ -2,12 +2,12 @@
 
 <br>
 
-## 1) inject itself
+## 1) injects itself
 
-## 2) load unobstrusive ui
+## 2) loads unobstrusive ui
 
-## 3) map dom to source
+## 3) map doms to source
 
-## 4) open editor
+## 4) opens editor
 
-## 5) update content
+## 5) updates content
