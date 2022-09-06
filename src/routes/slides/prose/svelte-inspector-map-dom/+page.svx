@@ -2,14 +2,12 @@
 
 ### is very easy
 ```js
-function findMetaEl(el) {
-    while (el) {
-        const file = el.__svelte_meta?.loc?.file;
-        if (el !== toggle_el && file && !file.includes('node_modules/')) {
-            return el;
-        }
-        el = el.parentNode;
+while (el) {
+    const file = el.__svelte_meta?.loc?.file;
+    if (el !== toggle_el && file && !file.includes('node_modules/')) {
+        return el;
     }
+    el = el.parentNode;
 }
 ```
 

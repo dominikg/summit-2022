@@ -22,6 +22,7 @@
         height: 100%;
         overflow-x: hidden; /* prevent scrollbar flickering */
         margin-right: calc(-1 * (100vw - 100%));
+        max-height: 1080px;
     }
     main {
         height: 100%;

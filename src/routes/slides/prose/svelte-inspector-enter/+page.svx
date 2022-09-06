@@ -18,9 +18,11 @@ export default config;
 <br>
 
 # for svelte-inspector to guide us
+
 ![inspector](./inspector.svg)
+
 <style>
-  img {transform:translateX(-50%);margin-left: 50%;}
+  img {transform:translateX(-50%);margin-left: 50%; height: 10rem;}
   h2 {text-align: right;}
   h3 {text-align: center;}
 </style>

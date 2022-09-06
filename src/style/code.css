@@ -3,7 +3,7 @@
     font-family: 'Fira Mono', monospace;
     overflow-x: hidden;
     overflow-y: auto;
-    max-height: 80vh;
+    max-height: 60vh;
     margin: 1rem auto;
     box-shadow: var(--shadow);
     border-radius: .5rem;
