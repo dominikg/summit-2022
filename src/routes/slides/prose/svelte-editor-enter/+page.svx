@@ -1,4 +1,4 @@
-# svelte inline-editor
+# Svelte inline-editor
 ## has all the context
 ```js
 // svelte.config.js

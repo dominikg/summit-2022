@@ -3,7 +3,7 @@
 </script>
 ## Ecosystem compatibility
 
-### it just works&trade; on [stackblitz](https://stackblitz.com/edit/sveltejs-kit-template-default-hb7yyu?file=svelte.config.js&terminal=dev)
+### it just works on <a href="https://stackblitz.com/edit/sveltejs-kit-template-default-hb7yyu?file=svelte.config.js&terminal=dev" rel="external, noopener" target="_blank">stackblitz</a>
 
 <img src={sb}  style="display:block" class="code-highlight" alt="stackblitz"/>
 
