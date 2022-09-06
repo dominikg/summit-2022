@@ -1,0 +1,27 @@
+## Open an inline editor
+
+### to get the file content
+```js
+function click(event) {
+    if (file_loc) {
+        import.meta.hot.send('svelte-inline-editor:start', meta);
+    }
+}
+```
+
+<h3 style="text-align: center">the editor ui sends a message</h3>
+
+```js
+server.ws.on('svelte-inline-editor:start', (meta, client) => {
+    try {
+        const filePath = path.resolve(root, meta.loc.file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        client.send('svelte-inline-editor:edit', { loc: meta.loc, content });
+    } catch (e) {
+        log.error(`failed to send content of ${meta.loc.file} to browser via ws`, e);
+    }
+});
+```
+<h3 style="text-align: right">and the plugin responds with the content</h3>
+
+## over the websocket integrated into vite

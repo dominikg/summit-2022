@@ -1,0 +1,23 @@
+## Saving changes
+
+###  also works by sending a message
+```js
+import.meta.hot.send('svelte-inline-editor:save', {...});
+```
+
+<h3 style="text-align: center">for the plugin to process</h3>
+
+```js
+compileSvelte(requestParser(file, false)!, code, options)
+    .then(() => {
+        // did compile, write to disk
+        fs.writeFileSync(file, code, 'utf-8');
+        server.ws.send('svelte-inline-editor:saved', { file, code });
+    })
+    .catch((error) => {
+        log.error(`failed to compile ${file}`, error);
+        server.ws.send('svelte-inline-editor:error', { file, error, code, content });
+    });
+```
+<h3 style="text-align: right">and write the changes to disk</h3>
+

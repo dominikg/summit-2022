@@ -1,0 +1,23 @@
+# svelte inline-editor
+## has all the context
+```js
+// svelte.config.js
+const config = {
+	vitePlugin:{
+		experimental: {
+			inline-editor: true
+		}
+	}
+};
+export default config;
+```
+
+<h2 style="text-align: right">and tools</h2>
+
+<br>
+
+# to keep our focus
+![editor](./editor.svg)
+<style>
+  img {transform:translateX(-50%);margin-left: 50%; height: 10rem;}
+</style>

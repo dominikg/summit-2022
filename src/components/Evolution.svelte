@@ -22,7 +22,12 @@
         transform-origin: bottom;
     }
     .center :global(svg path:nth-child(3)) {
-        transform: translateX(0.5rem);
+        transform: translateX(0.4rem);
+        transform-origin: bottom;
+    }
+
+    .center :global(svg path:nth-child(4)) {
+        transform: translateX(-0.2rem);
         transform-origin: bottom;
     }
 
@@ -60,6 +65,28 @@
         stroke-dasharray: 3.5;
     }
     .center.highlight-4 :global(svg path:nth-child(-n+3)) {
+        opacity: 0.3;
+    }
+
+    .center.highlight-5 :global(svg path:nth-child(4)) {
+        opacity: 1;
+        fill-opacity: 0;
+        stroke: currentColor;
+        stroke-width: 1.5;
+        stroke-opacity: 1;
+    }
+    .center.highlight-5 :global(svg path:nth-child(-n+3)) {
+        opacity: 0.3;
+    }
+
+    .center.highlight-6 :global(svg path:nth-child(4)) {
+        opacity: 1;
+        fill-opacity: 0;
+        stroke: #ff3e00;
+        stroke-width: 1.5;
+        stroke-opacity: 1;
+    }
+    .center.highlight-6 :global(svg path:nth-child(-n+3)) {
         opacity: 0.3;
     }
 </style>

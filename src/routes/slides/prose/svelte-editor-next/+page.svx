@@ -2,16 +2,16 @@
     import Evolution from "$components/Evolution.svelte";
 </script>
 
-## But are we there yet?
+## Are we finally there?
 
-<Evolution highlight={5}/>
+<Evolution highlight={6}/>
 
-<h2 style="text-align: right">still some ways to go!</h2>
+<h2 style="text-align: right">almost!</h2>
 
 ### ~~provide context~~
-### keep focus
+### ~~keep focus~~
+### improve focus ui
 
-# What?
 <style>
   h3 {text-align: center;}
 </style>

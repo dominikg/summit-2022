@@ -17,6 +17,12 @@ export const pageOrder = [
     '/slides/prose/svelte-inspector-open-editor-2',
     '/slides/prose/svelte-inspector-open-editor-ecosystem',
     '/slides/prose/svelte-inspector-next',
+    '/slides/prose/svelte-editor-enter',
+    '/slides/prose/svelte-editor-how-it-works',
+    '/slides/prose/svelte-editor-how-it-works-2',
+    '/slides/prose/svelte-editor-open',
+    '/slides/prose/svelte-editor-save',
+    '/slides/prose/svelte-editor-next',
     '/slides/prose/thank-you',
     '/slides/prose/credits',
     '/slides/prose/fin'
