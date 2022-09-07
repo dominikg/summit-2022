@@ -14,7 +14,7 @@ const config = {
 	},
 	vitePlugin:{
 		experimental: {
-			inspector: true,
+			inspector: {holdMode: true},
 			// generateMissingPreprocessorSourcemaps: true,
 			inlineEditor: true
 		}

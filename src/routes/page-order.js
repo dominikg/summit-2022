@@ -8,6 +8,7 @@ export const pageOrder = [
     '/slides/dev-setup-today',
     '/slides/dev-setup-context',
     '/slides/prose/svelte-inspector-enter',
+    '/slides/prose/svelte-inspector-options',
     '/slides/prose/svelte-inspector-how-it-works',
     '/slides/prose/svelte-inspector-inject',
     '/slides/prose/svelte-inspector-load-ui',

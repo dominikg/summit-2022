@@ -1,0 +1,18 @@
+## It has some options
+
+### so you can customize it
+```js
+// eg `meta-shift`  
+toggleKeyCombo: string;
+// deactivate after holding
+holdMode: boolean;
+// when to show the toggle button  
+showToggleButton: 'always' | 'active' | 'never';
+// where to show the button
+toggleButtonPos: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+// disable inspector styling
+customStyles: boolean;
+// advanced option, inject by appending
+appendTo: string;
+```
+<h3 style="text-align: right">to what works best for you and your app</h3>

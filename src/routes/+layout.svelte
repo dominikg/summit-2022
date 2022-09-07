@@ -4,6 +4,7 @@
     import "sanitize.css";
     import "../style/global.css";
     import "../style/code.css";
+    import "../style/inspector-visibility.css";
     import Header from "../components/Header.svelte";
     import Footer from "../components/Footer.svelte";
 </script>

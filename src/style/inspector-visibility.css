@@ -1,0 +1,12 @@
+.svelte-inspector-toggle {
+    transform: scale(2) translate(-10px, 10px);
+}
+
+.svelte-inline-editor-toggle {
+    transform: scale(2) translate(-10px, -10px);
+}
+
+/* prevent hold-mode making selections */
+body * {
+    user-select: none;
+}
